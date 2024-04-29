@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body  {
+        font-family: "Anta", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #313131;
+    }
+
+    h1 {
+        display: inline;
+        font-size: 6em;
+        letter-spacing: 10px;
+        word-spacing: 25px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        text-shadow: 0 0 10px red,
+                     0 0 20px darkred,
+                     0 0 30px red,
+                     0 0 40px darkred,
+                     0 0 50px red;
+        -webkit-text-stroke: 2px red;
+    }
+
+    h1 span {
+        animation: blink 3s  ease infinite;
+    }
+
+
+    @keyframes blink {
+        0%, 30%, 50%, 70%, 100% {
+            text-shadow: 0 0 10px red,
+                     0 0 20px darkred,
+                     0 0 30px red,
+                     0 0 40px darkred,
+                     0 0 50px red;
+        }
+        10%, 20%, 40% , 60%, 80%, 90%{
+            text-shadow: none;
+            -webkit-text-stroke-color: darkred;
+        }
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 2.5em;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #131313;
+    }
+
+    nav a h2 {
+        text-align: center;
+        letter-spacing: 50px;
+        color: darkblue;
+        -webkit-text-stroke: 1px gold;
+        transition: 0.5s;
+    }
+
+    nav:hover a h2 {
+        color: gold;
+        -webkit-text-stroke: 2px darkblue;
+        transition: 0.5s;
+        animation: move 1s linear infinite;
+    }
+
+    @keyframes move {
+        0% {
+            letter-spacing: 50px;
+        }
+        50% {
+            letter-spacing: 100px;
+        }
+        100%  {
+            letter-spacing: 50px;
+        }
+    }
+
+    img {
+        height: 40vh;
+    }
+
+</style>
+<body>
+
+    <nav>
+        <a href="Shop.html"><h2>BACK</h2></a>
+    </nav>
+    
+<h1>Purch<span>ase</span> Option Is</h1>
+<h1><span>not</span> avail<span>ble</span></h1> 
+
+<img src="Logo & symbols/error.gif" alt="Error">
+
+</body>
+</html>

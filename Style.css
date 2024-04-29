@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Caveat:wght@400..700&family=Kode+Mono:wght@400..700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(black, red);
+  border-radius: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+}
+
+#scrollbar {
+      height: 5px;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      background-color: red;
+      width: 100%;
+      scale: 0 1;
+      transform-origin: left;
+      animation: scroll-watcher linear;
+      animation-timeline: scroll(y);
+    }
+
+    @keyframes scroll-watcher {
+      to {
+        scale: 1 1;
+      }
+    }
+
+/*  25-02-2024  */
+/*----------Heading_1---------------*/
+
+#header_1 {
+  background: black;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid red;
+  cursor: default;
+}
+
+#header_1 p {
+  align-self: flex-end;
+  margin-right: 1vw;
+  font-size: 1.1em;
+  color: grey;
+}
+
+#header_1 h2 {
+  font-size: 2em;
+  -webkit-text-stroke: 5px transparent;
+  background-image: linear-gradient(to right, blue, cyan);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: black;
+  letter-spacing: 15px;
+  font-family: "Anta", sans-serif;
+
+  span {
+    color: red;
+    -webkit-text-stroke: 3px red;
+    font-size: 1.3em;
+  }
+}
+
+#header_1 img {
+  height: 90%;
+  width: auto;
+  margin-left: 5vw;
+}
+
+/*----------Heading_2---------------*/
+
+#header_2 {
+  background-color: black;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 3px solid red;
+  z-index: 999;
+}
+
+#header_2 nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header_2 nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#header_2 nav ul li a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: red;
+  background-color: black;
+  letter-spacing: 3px;
+  padding: 0.1em 0.6em;
+  font-family: 900;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: 3px solid red;
+  border-right: none;
+  border-top: none;
+  font-family: "kode Mono", sans-serif;
+}
+
+#header_2 nav ul li a:active {
+  background-color: cyan;
+}
+
+#header_2 nav ul li {
+  transform: skewX(-20deg);
+}
+
+#header_2 nav ul li:hover {
+  animation: LeftRight 1s linear infinite;
+}
+
+@keyframes LeftRight {
+  0% {
+    transform: skewX(-20deg);
+  }
+  50% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(-20deg);
+  }
+}
+
+#header_2 nav ul li:hover a {
+  box-shadow: 0 0 10px red, 0 0 15px maroon, 0 0 20px red;
+  border: 3px solid red;
+  border-left: none;
+  border-bottom: none;
+  transition: all 0.3s;
+}
+
+#header_2 nav div {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+}
+
+#header_2 nav div input[type="text"] {
+  height: 50%;
+  width: 100%;
+  margin-right: 5%;
+  align-self: center;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid red;
+  border-right: none;
+  outline: none;
+  padding: 0 10px;
+  color: white;
+  font-family: bold;
+  background: black;
+}
+
+#header_2 nav div span {
+  height: 50%;
+  display: flex;
+  border: 2px solid red;
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: -5%;
+  background: black;
+}
+
+#header_2 nav div span img {
+  height: 80%;
+  align-self: center;
+  margin: 10px;
+}
+
+/*---------WELCOME----------*/
+
+.text {
+  position: absolute;
+  top: 30vh;
+  left: 20vw;
+  z-index: 100;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,rgba(0, 0, 0, 0.276));
+  letter-spacing: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#welcome {
+  color: red;
+  font-size: 8rem;
+  padding-top: 40px;
+  font-family: "Jokerman", sans-serif;
+}
+
+
+
+/*----------MAIN---------------*/
+
+/*----------Section-1---------------*/
+
+main section:nth-child(1) {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  padding: 80vh 0 30px 0;
+}
+
+main section:nth-child(1) h2 {
+  font-family: "Kode Mono", cursive, sans-serif;
+  font-weight: 900;
+  align-self: center;
+  font-size: 1.8em;
+  color: cyan;
+}
+
+main section:nth-child(1) h2 span:nth-child(odd) {
+  font-size: 1.5em;
+  -webkit-text-stroke: 2px red;
+  color: transparent;
+}
+
+main section:nth-child(1) h2 span:nth-child(even) {
+  font-size: 1.5em;
+  -webkit-text-stroke: 2px gold;
+  color: transparent;
+}
+
+main section:nth-child(1) div:nth-child(1) {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+}
+
+main section:nth-child(1) div:nth-child(1) img {
+  height: 100%;
+  margin-left: 5vw;
+}
+
+main section:nth-child(1) div:nth-child(2) p:nth-child(1),
+main section:nth-child(1) div:nth-child(2) p:nth-child(2) {
+  font-family: "Chiller", cursive, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0 5vw;
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  line-height: normal;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px purple;
+}
+
+main section:nth-child(1) div:nth-child(2) p:nth-child(2) span img {
+  height: 50px;
+}
+
+#clr {
+  color: var(--clr);
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+/*----------Section-2---------------*/
+
+main section:nth-child(2) {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 0 0;
+}
+
+main section:nth-child(2) div {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 8px red;
+}
+
+main section:nth-child(2) div img {
+  height: 80%;
+  width: 40%;
+  transition: all 0.5s;
+}
+
+main section:nth-child(2) div:hover img {
+  transform: scale(1.3) translateX(-50px);
+  transition: all 0.5s;
+}
+
+main section:nth-child(2) div p {
+  padding: 0 10px 0 20px;
+  text-align: justify;
+  font-family: cursive, sans-serif;
+  color: gold;
+  font-size: 1em;
+  border-left: 5px double red;
+  transition: all 0.5s;
+  word-spacing: 3px;
+}
+
+main section:nth-child(2) details {
+  width: 15%;
+  height: 5vh;
+  text-transform: uppercase;
+  font-family: "Anta", sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding: 0 30px;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  background-color: darkred;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px 50px;
+  transition: all 0.5s;
+}
+
+main section:nth-child(2) details:hover {
+  border-radius: 50px 10px;
+  text-shadow: 0 0 10px red, 0 0 20px maroon, 0 0 30px red;
+  background-color: black;
+  border: 3px inset red;
+  transition: all 0.5s;
+}
+
+details h2 {
+  width: 500px;
+}
+
+
+/*----------Section-3---------------*/
+
+main section:nth-child(3) {
+  background: black;
+}
+
+main section:nth-child(3) div {
+  height: 100px;
+  background-color: black;
+  border-bottom: 5px solid red;
+}
+
+main section:nth-child(3) div img {
+  height: 115%;
+  animation: run 5s linear infinite;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10vw);
+  }
+
+  100% {
+    transform: translate(95vw);
+  }
+}
+
+/*----------Section-4---------------*/
+
+main section:nth-child(4) {
+  height: auto;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section:nth-child(4) div {
+  height: 80%;
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+main section:nth-child(4) div span {
+  font-size: 13em;
+  font-weight: 900;
+  font-family: "kode Mono", sans-serif;
+  -webkit-text-stroke: 2px red;
+}
+
+main section:nth-child(4) div span:nth-child(even) {
+  background: url("name_images/Water.gif");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+main section:nth-child(4) div span:nth-child(odd) {
+  background: url("name_images/H.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*----------------Footer-------------*/
+
+footer {
+  background: linear-gradient(
+    to bottom,
+    black,
+    rgb(12, 12, 12),
+    rgb(64, 61, 61)
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 50px 0;
+}
+
+footer div {
+  height: auto;
+  color: white;
+}
+
+footer h3 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding: 3vw;
+  margin-top: 15px;
+  background: linear-gradient(blue 20%, cyan 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+footer div ul li {
+  display: flex;
+  align-items: center;
+}
+
+footer div ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  line-height: 60px;
+  margin-left: 2vw;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+footer div ul li:hover a {
+  text-decoration: underline;
+  color: cyan;
+}
+
+footer div ul li img {
+  height: 50px;
+  margin-left: 3vw;
+}
+
+footer button a {
+  text-decoration: none;
+}
+
+footer button {
+  background-color: white;
+  width: 10%;
+  align-self: center;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 50% 50% 0 0;
+  padding: 10px 10px 0;
+}
+
+footer footer {
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-spacing: 10px;
+  font-size: 1.2em;
+}
+
+/*---------------END------------------*/

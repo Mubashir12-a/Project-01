@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+</head>
+<style>
+
+    * {
+        padding: 0;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #scroll {
+        height: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        background:linear-gradient(to right, cyan, blue, darkblue);
+        z-index: 9999;
+        border-radius: 0 20px 20px 0;
+        animation: bar linear;
+        animation-timeline: scroll(y);
+    }
+
+    @keyframes bar {
+        100% {
+            width: 100%;
+        }
+    }
+
+     a {
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        height: 20vh;
+    }
+
+    main {
+        margin: 0 10%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        letter-spacing: 5px;
+        word-spacing: 15px;
+        font-size: 150%;
+    }
+
+    button {
+        background-color: white;
+        width: 50%;
+        margin: 0 25%;
+        height: 100%;
+        border-radius: 20px;
+        position: relative;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    button:hover::after {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+
+    button::after {
+        content: "Click On Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: cyan;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        font-size: 1.3em;
+        font-weight: bold;
+        transition: all 0.5s;
+    }
+
+    button:active {
+        background-color: red;
+    }
+
+    strong {
+        text-decoration: underline;
+        color: red;
+        font-weight: 900;
+    }
+
+    ul li {
+        color: blue;
+    }
+
+    h3 {
+    border-bottom: 5px solid rgb(0, 0, 0); 
+    background-color: rgb(176, 168, 168);
+    padding: 5px 10px;
+    border-radius: 20px;
+    }
+
+    h2 {
+    border-bottom: 5px solid rgb(0, 0, 0); 
+    background-color: rgb(46, 112, 130);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    }
+
+    h1 {
+        font-size: 300%;
+        margin: 0;
+        letter-spacing: 15px;
+    }
+    
+</style>
+<body>
+    <div id="scroll">
+
+    </div>
+    <main>
+    <h1>Introduction</h1>
+
+    <h2>My Name Is Mubashir</h2>
+    <h3>I Study BCA In ICSC</h3>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk1ZUrQfpq6JWv5chBNw_LdIrPc8U6u42m8w&usqp=CAU" alt="">
+
+    <h4>Welcome To My Web-Project</h4>
+
+    <img src="Logo & symbols/website.png" alt="" height="300px">
+
+    <p>This website is a collection of 6 pages:</p>
+
+    <img src="Logo & symbols/combination.png" alt="" height="200px">
+    <ul>
+        <li>Index.html</li>
+        <li>Contact.html</li>
+        <li>Intro.html</li>
+        <li>Purchase_error.html</li>
+        <li>Shop.html</li>
+        <li>More.html</li>
+    </ul>
+    <p>With the help of <strong>HTML and Vanilla-CSS(Pure-CSS)</strong></p>
+
+    <img src="Logo & symbols/HTMLCSS.png" alt="" height="250px">
+
+    <h2>I build a website about Board-Games</h2>
+
+
+    <h3>I have included normal CSS</h3>
+
+    <img src="Logo & symbols/book.png" alt="" height="200px">
+
+    <p>But their are some high level properties i have introduced</p>
+    <h3>Like:</h3>
+    <ul>
+        <li><strong>-webkit or ::-webkit:</strong> webkit is property or we can say tsudo class element which helps us to run property on browser.</li>
+<br><hr><br>
+        <li><strong>-webkit-text-stroke:</strong> its like a borders for text.</li>
+<br><hr><br>
+        <li><strong>backgroung-clip:</strong> used for to set text background in text like image can take color's place of text.</li>
+<br><hr><br>
+        <li><strong>::before & ::after :</strong> its a tsudo classes which helps to implement anything  before or after any element.</li>
+<br><hr><br>
+        <li><strong>Animation:</strong> I have used some animation  effects to make my webpage more interactive.</li>
+<br><hr><br>
+        <li><strong>PNG images:</strong> I used images in PNG format so images will be without background and also PNG is considered high quality image.</li>
+<br><hr><br>
+        <li><strong>PNG GIF images:</strong> I used some gif images as a logo so it will look little bit attractive.</li>
+<br><hr><br>
+        <li><strong>Flex Box:</strong> To make elem flexible and be adjusted as i like.</li>
+<br><hr><br>
+        <li><strong>Grid Box:</strong> To make a table type structure its same as table.</li>
+<br><hr><br>
+        <li><strong>Image In title bar:</strong> In title bar where title goes i added images also their</li>
+
+    </ul>
+
+    <img src="Logo & symbols/note.png" alt="" height="250px">
+
+    <h3>NOTE:  In this page Source of image's is GOOGLE & Source of written Content is ChatGPT</h3>
+    <h3>About font's source i got them from MS-Word</h3>
+    <h3>Nothing is Copied but rather Inspired</h3>
+
+    <img src="Logo & symbols/click.png" alt="" height="250px">
+
+
+    <a href="Index.html" target="_blank"><button>CONTINUE</button></a>
+</main>
+</body>
+</html>
